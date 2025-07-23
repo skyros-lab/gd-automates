@@ -1,9 +1,12 @@
 {
   "name": "discord-automatisation-gui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Interface graphique complète pour automatiser vos tâches Discord personnelles.",
   "main": "main.js",
-  "author": "skyros-lab",
+  "author": {
+    "name": "skyros-lab",
+    "email": "id.skyros@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "start": "electron .",
