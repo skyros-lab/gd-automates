@@ -1,0 +1,39 @@
+name: Build‑and‑Release
+
+on:
+  push:
+    branches: [ main ]
+    tags:     [ "v*" ]
+    paths:    [ "package.json" ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: 📦 Install deps (production + dev)
+        run: npm ci
+
+      - name: 🛠  Build with electron-builder
+        run: npx electron-builder --publish always
+
+      - name: ⬆️  Upload CI artifacts (en plus de la Release)
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-${{ runner.os }}
+          path: dist/

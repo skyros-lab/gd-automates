@@ -1,0 +1,67 @@
+{
+  "name": "discord-automatisation-gui",
+  "version": "1.0.0",
+  "description": "Interface graphique complète pour automatiser vos tâches Discord personnelles.",
+  "main": "main.js",
+  "author": "skyros-lab",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "npm start",
+    "rebuild": "electron-rebuild -f -w electron",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.skyros-lab.gd-automates",
+    "productName": "Discord Automate GUI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist"
+    ],
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": "nsis",
+      "sign": false,
+      "signingHashAlgorithms": []
+    },
+    "mac": {
+      "icon": "assets/icon.icns",
+      "target": "dmg",
+      "identity": null
+    },
+    "linux": {
+      "icon": "assets/icon.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.6.2",
+    "node-fetch": "^2.7.0",
+    "tom-select": "^2.4.3"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9"
+  }
+}

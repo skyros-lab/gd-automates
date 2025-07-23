@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Discord Automation GUI</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="panel active" id="delete">
+    <form id="deleteForm">
+
+      <label id="tokenLabel">
+        <div class="token-header">
+          Indiquez votre token Discord<span id="tokenStatus" class="status"></span>
+        </div>
+        <input type="password" id="dToken" required>
+      </label>
+
+      <label>Mode de recherche pour la suppression
+        <select id="dMode" required>
+          <option value="guild">Serveur (type guild)</option>
+          <option value="dm">MP ou groupe d'amis</option>
+        </select>
+      </label>
+
+      <label id="guildRow" hidden>Sélectionnez un serveur
+        <select id="dGuild"></select>
+      </label>
+
+      <label id="dmRow" hidden>Sélectionnez une conversation privée
+        <select id="dDm"></select>
+      </label>
+
+      <label id="chanRow" hidden>Salon spécifique visé (optionnel)
+        <select id="dChannel"></select>
+      </label>
+
+      <label>Plage de messages à rechercher
+        <input type="number" id="dLimit" min="1" max="100000" value="100" required>
+      </label>
+
+      <label>Ordre de suppression
+        <select id="dOrder" required>
+          <option value="old">Anciens → récents</option>
+          <option value="new">Récents → anciens</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Plage de dates</legend>
+        <label>De :
+          <input type="date" id="dateStart" min="2000-01-01" max="2100-12-31">
+        </label>
+        <label>À :
+          <input type="date" id="dateEnd" min="2000-01-01" max="2100-12-31">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Entre deux IDs de message</legend>
+        <label>ID minimum : <input type="text" id="idMin" pattern="^\d{17,}$"></label>
+        <label>ID maximum : <input type="text" id="idMax" pattern="^\d{17,}$"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Filtrage par mot-clé</legend>
+        <label><input type="text" id="keyword" placeholder="Mot-clés séparés par virgule ou espace"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Filtres de contenu</legend>
+        <div class="fieldset-grid">
+          <label><input type="checkbox" id="fAll" checked> Tout supprimer</label>
+          <label><input type="checkbox" id="fFiles"> Fichiers (images, exécutables)</label>
+          <label><input type="checkbox" id="fLinks"> Liens (GIFs, intégrations)</label>
+          <label><input type="checkbox" id="fText"> Messages textuels</label>
+          <label><input type="checkbox" id="fVoice"> Messages vocaux</label>
+        </div>
+      </fieldset>
+
+      <div class="button-row">
+        <button type="submit" id="dStart" disabled>Lancer l'automatisme</button>
+        <button type="button" id="dPause" disabled class="pause">Suspendre temporairement</button>
+        <button type="button" id="dStop" disabled>Stopper le processus</button>
+      </div>
+    </form>
+
+    <div class="log-wrapper">
+      <pre id="logArea" class="log"></pre>
+
+      <div id="copyLogBtn" title="Copier les logs" class="disabled">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <title>content-copy</title>
+          <path
+            d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
+        </svg>
+      </div>
+
+      <div id="streamerToggle" title="Activer/Désactiver le mode streamer">
+        <svg id="streamerIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <title>eye</title>
+          <path
+            d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      </div>
+
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
