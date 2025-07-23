@@ -157,10 +157,10 @@ $('#deleteForm').addEventListener('submit', e => {
   const min = new Date('2000-01-01'), max = new Date('2100-12-31');
 
   if (dStart && (new Date(dStart) < min || new Date(dStart) > max)) {
-    e.preventDefault(); alert('Date de début hors plage 2000‑2100'); return;
+    e.preventDefault(); alert('Date de début hors plage 2000-2100'); return;
   }
   if (dEnd && (new Date(dEnd) < min || new Date(dEnd) > max)) {
-    e.preventDefault(); alert('Date de fin hors plage 2000‑2100'); return;
+    e.preventDefault(); alert('Date de fin hors plage 2000-2100'); return;
   }
 }, { once: true });
 

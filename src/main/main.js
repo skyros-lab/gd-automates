@@ -52,7 +52,7 @@ function createWindow() {
       const { response } = await dialog.showMessageBox(mainWin, {
         type: 'warning',
         title: 'Processus en cours',
-        message: 'Un processus est toujours actif. Voulez‑vous vraiment quitter ?',
+        message: 'Un processus est toujours actif. Voulez-vous vraiment quitter ?',
         buttons: ['Annuler', 'Quitter'],
         defaultId: 0,
         cancelId: 0
@@ -100,7 +100,7 @@ function createWindow() {
             const { response } = await dialog.showMessageBox(mainWin, {
               type: 'warning',
               title: 'Processus en cours',
-              message: 'Un processus est toujours actif. Voulez‑vous vraiment redémarrer ?',
+              message: 'Un processus est toujours actif. Voulez-vous vraiment redémarrer ?',
               buttons: ['Annuler', 'Redémarrer'],
               defaultId: 0,
               cancelId: 0
@@ -140,7 +140,7 @@ function createWindow() {
             const { response } = await dialog.showMessageBox(mainWin, {
               type: 'warning',
               title: 'Processus en cours',
-              message: 'Un processus est toujours actif. Voulez‑vous vraiment quitter ?',
+              message: 'Un processus est toujours actif. Voulez-vous vraiment quitter ?',
               buttons: ['Annuler', 'Quitter'],
               defaultId: 0,
               cancelId: 0
@@ -167,6 +167,22 @@ function createWindow() {
 
   if (app.isPackaged) {
     autoUpdater.checkForUpdatesAndNotify().catch(() => { });
+
+    autoUpdater.on('update-downloaded', () => {
+      const result = dialog.showMessageBoxSync(mainWin, {
+        type: 'info',
+        buttons: ['Plus tard', 'Redémarrer maintenant'],
+        defaultId: 1,
+        cancelId: 0,
+        title: 'Mise à jour disponible',
+        message: 'Une nouvelle version a été téléchargée. Voulez-vous redémarrer et l’installer maintenant ?'
+      });
+
+      if (result === 1) {
+        isQuiting = true;
+        autoUpdater.quitAndInstall(false, true);
+      }
+    });
   }
 }
 

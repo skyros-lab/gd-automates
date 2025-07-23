@@ -21,7 +21,7 @@ async function safeFetch(url, options = {}) {
   if (res.status === 429) {
     const json = await res.json().catch(() => null);
     const wait = json?.retry_after ?? 1;
-    console.warn(`429 rate‑limit – pause ${wait}s`);
+    console.warn(`429 rate-limit – pause ${wait}s`);
     await sleep(wait * 1000);
     return safeFetch(url, options);
   }
@@ -78,7 +78,7 @@ function deleteOwnMessages(opts, log) {
   const signal = controller.signal;
 
   const task = (async () => {
-    log('Pré‑analyse des paramètres de suppression…', 'info');
+    log('Pré-analyse des paramètres de suppression…', 'info');
     log(`Mode : ${mode} – ID cible : ${targetId}`, 'gray');
 
     const me = await getUserId(token, signal);
