@@ -33,7 +33,7 @@ jobs:
         run: npx electron-builder --publish always
 
       - name: ⬆️  Upload CI artifacts (en plus de la Release)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-${{ runner.os }}
           path: dist/
