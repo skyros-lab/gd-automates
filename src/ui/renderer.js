@@ -65,9 +65,13 @@ $('#dToken').addEventListener('input', () => {
 
     try {
       await window.electronAPI.validateToken(token);
-      STATUS.textContent = 'Le token est valide'; STATUS.classList.add('ok');
+      const username = await window.electronAPI.getUsername(token);
+
+      STATUS.textContent = `Le token est valide (${username})`;
+      STATUS.classList.add('ok');
+
       setModeState(true); $('#dStart').disabled = false;
-      uiLog('Token validé avec succès', 'ok');
+      uiLog(`Token validé avec succès pour ${username}`, 'ok');
       await populateLists(token);
     } catch (err) {
       STATUS.textContent = 'Le token est invalide'; STATUS.classList.add('fail');

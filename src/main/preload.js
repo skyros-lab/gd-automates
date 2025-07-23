@@ -6,6 +6,7 @@ try {
     validateToken,
     listGuilds,
     listDMs,
+    getUsername,
     listGuildChannels
   } = require('../api/api.js');
 
@@ -43,6 +44,7 @@ try {
     listGuilds,
     listDMs,
     listGuildChannels,
+    getUsername,
     error: (title, msg) => ipcRenderer.invoke('show-error', title, msg),
     setProcessFlag: (flag) => ipcRenderer.invoke('set-process-flag', flag)
   });

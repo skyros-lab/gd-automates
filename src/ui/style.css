@@ -170,23 +170,6 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-0);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: var(--radius);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-2);
-}
-
 .log {
   background: var(--bg-0);
   border: 1px solid var(--border);
@@ -457,6 +440,23 @@ textarea,
   user-select: text;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-2);
+}
+
 #logArea {
   scrollbar-width: thin;
   scrollbar-color: var(--border) var(--bg-0);
@@ -477,5 +477,43 @@ textarea,
 }
 
 #logArea::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-2);
+}
+
+.log,
+textarea,
+input,
+select {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--bg-0);
+}
+
+.log::-webkit-scrollbar,
+textarea::-webkit-scrollbar,
+input::-webkit-scrollbar,
+select::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.log::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track,
+input::-webkit-scrollbar-track,
+select::-webkit-scrollbar-track {
+  background: var(--bg-0);
+}
+
+.log::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb,
+input::-webkit-scrollbar-thumb,
+select::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius);
+}
+
+.log::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover,
+input::-webkit-scrollbar-thumb:hover,
+select::-webkit-scrollbar-thumb:hover {
   background: var(--bg-2);
 }

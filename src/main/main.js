@@ -42,7 +42,6 @@ function createWindow() {
 
   mainWin.loadFile(path.resolve(__dirname, '../ui/index.html'));
 
-
   mainWin.on('close', async (e) => {
     if (isQuiting) return;
 

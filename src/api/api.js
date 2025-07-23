@@ -15,6 +15,35 @@ function shouldPause() {
   return typeof globalThis.__shouldPause === 'function' && globalThis.__shouldPause();
 }
 
+function getDiscordHeaders(token) {
+  return {
+    'Authorization': token,
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
+      '(KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+    'X-Discord-Locale': 'fr',
+    'X-Discord-Timezone': 'Europe/Paris',
+    'X-Debug-Options': 'bugReporterEnabled',
+    'X-Platform': 'Web',
+    'X-Super-Properties': Buffer.from(JSON.stringify({
+      os: "Windows",
+      browser: "Chrome",
+      device: "",
+      system_locale: "fr-FR",
+      browser_user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+        "(KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+      browser_version: "117.0.0.0",
+      os_version: "10",
+      referrer: "",
+      referring_domain: "",
+      referrer_current: "",
+      referring_domain_current: "",
+      release_channel: "stable",
+      client_build_number: 264304,
+      client_event_source: null
+    })).toString('base64'),
+  };
+}
+
 async function safeFetch(url, options = {}) {
   const res = await doFetch(url, options);
 
@@ -34,22 +63,39 @@ async function safeFetch(url, options = {}) {
 }
 
 const getUserId = (t, s) => safeFetch(`${API}/users/@me`,
-  { headers: { Authorization: t }, signal: s })
+  { headers: getDiscordHeaders(t), signal: s })
   .then(j => { if (!j?.id) throw new Error('Token invalide'); return j.id; });
 
 const validateToken = getUserId;
 const listGuilds = (t, s) => safeFetch(`${API}/users/@me/guilds`,
-  { headers: { Authorization: t }, signal: s });
+  { headers: getDiscordHeaders(t), signal: s });
 const listDMs = (t, s) => safeFetch(`${API}/users/@me/channels`,
-  { headers: { Authorization: t }, signal: s });
+  { headers: getDiscordHeaders(t), signal: s });
 const listGuildChannels = async (t, gid, s) => {
   const chans = await safeFetch(`${API}/guilds/${gid}/channels`,
-    { headers: { Authorization: t }, signal: s });
+    { headers: getDiscordHeaders(t), signal: s });
   return chans.filter(c => [0, 2, 5, 10, 11, 12, 13, 15, 16].includes(c.type));
 };
 
 const getChannels = (t, mode, id, s) =>
   (mode === 'guild' ? listGuildChannels(t, id, s) : [{ id, name: 'DirectMessage' }]);
+
+async function getUsername(token) {
+  try {
+    const userInfo = await safeFetch('https://discord.com/api/v10/users/@me', {
+      headers: getDiscordHeaders(token)
+    });
+
+    if (!userInfo || !userInfo.username) {
+      throw new Error('Impossible de récupérer le nom d\'utilisateur');
+    }
+
+    return userInfo.username;
+  } catch (err) {
+    console.error('Erreur dans la récupération du nom d\'utilisateur :', err);
+    throw new Error('Erreur lors de la récupération du nom d\'utilisateur');
+  }
+}
 
 async function fetchMessages(token, channelId, limit, newestFirst, signal) {
   const out = []; let before = null, after = null;
@@ -59,7 +105,7 @@ async function fetchMessages(token, channelId, limit, newestFirst, signal) {
     if (newestFirst ? after : before) {
       url.searchParams.set(newestFirst ? 'after' : 'before', newestFirst ? after : before);
     }
-    const batch = await safeFetch(url, { headers: { Authorization: token }, signal });
+    const batch = await safeFetch(url, { headers: getDiscordHeaders(token), signal });
     if (!Array.isArray(batch) || !batch.length) break;
     out.push(...batch);
     if (newestFirst) after = batch.at(-1).id; else before = batch.at(-1).id;
@@ -140,10 +186,10 @@ function deleteOwnMessages(opts, log) {
 
         try {
           await safeFetch(`${API}/channels/${chan.id}/messages/${m.id}`,
-            { method: 'DELETE', headers: { Authorization: token }, signal });
+            { method: 'DELETE', headers: getDiscordHeaders(token), signal });
           total++;
           log(`🗑️  Suppression id:${m.id}  |  « ${content || '[embed/attach]'} »`, 'del');
-          await sleep(200);
+          await sleep(200 + Math.random() * 300);
         } catch (err) {
           if (signal.aborted) throw new DOMException('Aborted', 'AbortError');
           log(`Erreur suppression id:${m.id} → ${err.message}`, 'error');
@@ -165,5 +211,6 @@ module.exports = {
   validateToken,
   listGuilds,
   listDMs,
+  getUsername,
   listGuildChannels
 };
