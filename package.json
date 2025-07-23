@@ -1,6 +1,6 @@
 {
   "name": "discord-automatisation-gui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Interface graphique complète pour automatiser vos tâches Discord personnelles.",
   "main": "main.js",
   "author": {
