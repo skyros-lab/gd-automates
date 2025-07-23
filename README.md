@@ -1,5 +1,5 @@
 # Discord Automation GUI
-
+Ce programme open-source propose des automatismes sûrs pour le réseau social Discord à des fins éthiques et d'apprentissage uniquement.
 Cette documentation explique comment récupérer votre token Discord et présente en détail toutes les fonctionnalités de l’application.
 
 ## Récupération de votre token Discord
@@ -15,7 +15,7 @@ Suivez ces étapes pour le récupérer :
 
 Autre méthode : 
 1. Suivez les mêmes étapes pour ouvrir les outils de développement. 
-2. Rendez-vous dans l'onglet `Application > Storage > LocalStorage.
+2. Rendez-vous dans l'onglet `Application` > `Storage` > `LocalStorage`.
 3. Cliquez sur **https://discord.com/**, puis activez le mode responsive.
 4. Alors, filtrez par le mot-clé `token` et sélectionnez le texte brut dans la section **Value**.
 
