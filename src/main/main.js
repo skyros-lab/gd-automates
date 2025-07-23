@@ -7,9 +7,10 @@ if (!app.requestSingleInstanceLock()) app.quit();
 let mainWin;
 let tray = null;
 let isQuiting = false;
+let isProcessing = false;
 
 function iconPath() {
-  const base = path.join(__dirname, 'assets');
+  const base = path.join(__dirname, '../../assets');
   return process.platform === 'win32'
     ? path.join(base, 'icon.ico')
     : process.platform === 'darwin'
@@ -37,12 +38,33 @@ function createWindow() {
     }
   });
 
-  mainWin.loadFile(path.resolve(__dirname, 'index.html'));
+  mainWin.setMenu(null);
 
-  mainWin.on('close', (e) => {
-    if (!isQuiting) {
-      e.preventDefault();
-      mainWin.hide();
+  mainWin.loadFile(path.resolve(__dirname, '../ui/index.html'));
+
+
+  mainWin.on('close', async (e) => {
+    if (isQuiting) return;
+
+    e.preventDefault();
+
+    if (isProcessing) {
+      const { response } = await dialog.showMessageBox(mainWin, {
+        type: 'warning',
+        title: 'Processus en cours',
+        message: 'Un processus est toujours actif. Voulez‑vous vraiment quitter ?',
+        buttons: ['Annuler', 'Quitter'],
+        defaultId: 0,
+        cancelId: 0
+      });
+
+      if (response === 1) {
+        isQuiting = true;
+        app.quit();
+      }
+    } else {
+      isQuiting = true;
+      app.quit();
     }
   });
 
@@ -57,6 +79,12 @@ function createWindow() {
 
     return Menu.buildFromTemplate([
       {
+        label: 'Discord GUI',
+        icon: path.join(__dirname, '../../assets/icon-menu.png'),
+        enabled: false
+      },
+      { type: 'separator' },
+      {
         label: toggleLabel,
         click: () => {
           if (!mainWin) return;
@@ -67,11 +95,28 @@ function createWindow() {
       },
       {
         label: 'Redémarrer l’application',
-        click: () => { app.relaunch(); app.exit(); }
+        click: async () => {
+          if (isProcessing) {
+            const { response } = await dialog.showMessageBox(mainWin, {
+              type: 'warning',
+              title: 'Processus en cours',
+              message: 'Un processus est toujours actif. Voulez‑vous vraiment redémarrer ?',
+              buttons: ['Annuler', 'Redémarrer'],
+              defaultId: 0,
+              cancelId: 0
+            });
+
+            if (response !== 1) return;
+          }
+
+          isQuiting = true;
+          app.relaunch();
+          app.exit();
+        }
       },
       { type: 'separator' },
       {
-        label: 'À propos',
+        label: 'À propos de cette application',
         click: () => {
           dialog.showMessageBox({
             type: 'info',
@@ -90,7 +135,20 @@ function createWindow() {
       { type: 'separator' },
       {
         label: 'Quitter l’application',
-        click: () => {
+        click: async () => {
+          if (isProcessing) {
+            const { response } = await dialog.showMessageBox(mainWin, {
+              type: 'warning',
+              title: 'Processus en cours',
+              message: 'Un processus est toujours actif. Voulez‑vous vraiment quitter ?',
+              buttons: ['Annuler', 'Quitter'],
+              defaultId: 0,
+              cancelId: 0
+            });
+
+            if (response !== 1) return;
+          }
+
           isQuiting = true;
           app.quit();
         }
@@ -127,6 +185,10 @@ app.on('activate', () => {
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
+});
+
+ipcMain.handle('set-process-flag', (_, flag) => {
+  isProcessing = !!flag;
 });
 
 ipcMain.handle('show-error', (_, title, message) => {

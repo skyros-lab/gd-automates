@@ -1,8 +1,8 @@
 {
   "name": "discord-automatisation-gui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Interface graphique complète pour automatiser vos tâches Discord personnelles.",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "author": {
     "name": "skyros-lab",
     "email": "id.skyros@gmail.com"

@@ -4,6 +4,8 @@ if (!window.electronAPI?.deleteOwnMessages) {
 }
 console.log('%c✔ electronAPI disponible', 'color:#4caf50;font-weight:bold;');
 
+window.electronAPI.setProcessFlag(false);
+
 const $ = q => document.querySelector(q);
 
 const STATUS = $('#tokenStatus');
@@ -183,6 +185,7 @@ $('#deleteForm').addEventListener('submit', async e => {
   if (currentProcess) return uiLog('Un processus est déjà actif pour lancer le programme.', 'warn');
 
   setRunning(true);
+  window.electronAPI.setProcessFlag(true);
   logArea.innerHTML = '';
   updateCopyBtnState();
   uiLog('=== Lancement du processus de suppression ===', 'info');
@@ -244,6 +247,7 @@ $('#deleteForm').addEventListener('submit', async e => {
     .finally(() => {
       currentProcess = false;
       setRunning(false);
+      window.electronAPI.setProcessFlag(false);
       uiLog('=== Processus terminé ===', 'info');
     });
 });
@@ -257,6 +261,7 @@ $('#dStop').onclick = () => {
       isPaused = false;
       $('#dPause').className = 'pause';
       $('#dPause').textContent = 'Suspendre temporairement';
+      window.electronAPI.setProcessFlag(false);
     } else {
       uiLog('Aucun processus à interrompre', 'error');
     }

@@ -7,7 +7,7 @@ try {
     listGuilds,
     listDMs,
     listGuildChannels
-  } = require('./api.js');
+  } = require('../api/api.js');
 
   console.log('[PRELOAD] api.js chargé OK');
 
@@ -43,7 +43,8 @@ try {
     listGuilds,
     listDMs,
     listGuildChannels,
-    error: (title, msg) => ipcRenderer.invoke('show-error', title, msg)
+    error: (title, msg) => ipcRenderer.invoke('show-error', title, msg),
+    setProcessFlag: (flag) => ipcRenderer.invoke('set-process-flag', flag)
   });
 
   console.log('[PRELOAD] electronAPI exposé');
