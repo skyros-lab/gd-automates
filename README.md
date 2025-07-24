@@ -39,18 +39,16 @@ Cette documentation explique comment récupérer votre token Discord et présent
   </a>
 </p>
 
-La dernière version stable de l’application est disponible à l’adresse suivante :  
-[https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest)
-
-Des fichiers sont proposés pour chaque système d’exploitation :
+### Des fichiers sont proposés pour chaque système d’exploitation :
 
 | Plateforme | Type                                                            | Format                          |
 |------------|------------------------------------------------------------------|----------------------------------|
-| **Windows** | Exécutable, Archive portable                                   | `.exe`, `.zip`                  |
-| **macOS**   | Installateur, Version portable                                 | `.dmg`, `.zip`                  |
-| **Linux**   | Exécutable universel, Installateur (Debian/Ubuntu), Version portable | `.AppImage`, `.deb`, `.tar.gz` |
+| **Windows** | Exécutable, archive portable                                   | `.exe`, `.zip`                  |
+| **macOS**   | Installateur, version portable                                 | `.dmg`, `.zip`                  |
+| **Linux**   | Exécutable universel, installateur (Debian/Ubuntu), version portable | `.AppImage`, `.deb`, `.tar.gz` |
 
-Aucune installation n’est requise.  
+La dernière version stable de l’application est disponible à l’adresse suivante :  
+[https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest).
 Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
 
 ---
