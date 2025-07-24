@@ -90,27 +90,56 @@
     <div class="log-wrapper">
       <pre id="logArea" class="log"></pre>
 
-      <div id="copyLogBtn" title="Copier les logs" class="disabled">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-          <title>content-copy</title>
-          <path
-            d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
-        </svg>
+      <div class="log-icons">
+
+        <div id="searchToggle" title="Rechercher dans les logs" class="icon-btn icon-search">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+          </svg>
+        </div>
+
+        <div id="streamerToggle" title="Activer/Désactiver le mode streamer" class="icon-btn icon-streamer">
+          <svg id="streamerIcon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <title>eye</title>
+            <path
+              d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
+        </div>
+
+        <div id="copyLogBtn" title="Copier les logs" class="icon-btn icon-copy disabled">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <title>content-copy</title>
+            <path
+              d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
+          </svg>
+        </div>
+
+        <div id="downloadLogBtn" title="Télécharger les logs" class="icon-btn icon-download disabled">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z" />
+          </svg>
+        </div>
+
+        <div id="clearLogBtn" title="Effacer les logs" class="icon-btn icon-clear disabled">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19A2 2 0 0 0 8 21h8a2 2 0 0 0 2-2V7H6v12M19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+          </svg>
+        </div>
+
       </div>
 
-      <div id="streamerToggle" title="Activer/Désactiver le mode streamer">
-        <svg id="streamerIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>eye</title>
-          <path
-            d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
-          <circle cx="12" cy="12" r="2" />
-        </svg>
+      <div id="floatingSearch">
+        <input id="logSearch" type="text" placeholder="Rechercher…">
+        <span id="searchCount"></span>
+        <button id="closeSearch">&times;</button>
       </div>
 
     </div>
 
     <script src="./renderer.js"></script>
+  </div>
 </body>
 
 </html>

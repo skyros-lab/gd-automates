@@ -47,9 +47,7 @@ Cette documentation explique comment récupérer votre token Discord et présent
 | **macOS**   | Installateur, version portable                                 | `.dmg`, `.zip`                  |
 | **Linux**   | Exécutable universel, installateur (Debian/Ubuntu), version portable | `.AppImage`, `.deb`, `.tar.gz` |
 
-La dernière version stable de l’application est disponible [en cliquant ici (lien GitHub)](https://github.com/skyros-lab/gd-automates/releases/latest).
-
-Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
+La dernière version stable de l’application est disponible [en cliquant ici (lien GitHub)](https://github.com/skyros-lab/gd-automates/releases/latest). Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
 
 ---
 
@@ -68,8 +66,11 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
     - [Filtrage selon le type de contenu (texte, lien, fichier, etc.)](#filtrage-par-type-de-contenu)
   - [Lancer, suspendre, ou arrêter le processus](#contrôle-du-processus)
   - [Suivi en temps réel et journalisation des actions](#suivi-et-journalisation)
-  - [Activer le mode Streamer pour masquer les données sensibles](#mode-streamer)
-- [Fonctionnalités système via l'icône de la barre](#fonctionnalités-système-icône-de-la-barre)
+  - [Suivi en temps réel et journalisation des actions](#suivi-et-journalisation)
+    - [Activer le mode Streamer pour masquer les données sensibles](#mode-streamer)
+    - [Rechercher des mots-clés dans les logs](#rechercher-dans-les-logs)
+    - [Effacer tous les logs affichés](#effacer-les-logs)
+    - [Télécharger les logs au format texte](#télécharger-les-logs)
 - [Système de mise à jour automatique intégré](#mise-à-jour-automatique)
 - [À propos du projet et de son auteur](#%EF%B8%8F-à-propos)
 - [Contribuer au développement du projet](#-envie-de-contribuer-)
@@ -150,17 +151,52 @@ Cocher « Tout supprimer » désactive automatiquement les autres filtres.
 * **Reprendre** : relance le processus après une pause.
 * **Stopper** : annule le processus en cours et libère les ressources.
 
-### Suivi et journalisation
+---
 
-Les opérations sont journalisées en temps réel dans la zone dédiée.
+## Suivi et journalisation
 
-* Chaque action est horodatée et affichée avec un code couleur selon le niveau (`info`, `avertissement`, `erreur`, `suppression`).
-* Le bouton « Copier les logs » permet de copier l’intégralité du journal dans le presse-papier pour analyse ultérieure.
+Les opérations sont affichées en temps réel dans la zone de logs :
 
-### Mode « Streamer »
+* Chaque entrée est **horodatée** et présentée dans une couleur correspondant à son niveau (`info`, `avertissement`, `erreur`, `suppression`).
+* Trois icônes permettent d’agir sur le journal :
 
-Ce mode masque le contenu sensible des logs en temps réel.
-Activez-le ou désactivez-le via l’icône en forme d’œil : le journal alterne entre affichage complet et affichage protégé.
+  * **Copier** : duplique tout le contenu dans le presse‑papier,
+  * **Télécharger** : exporte le log en `.txt`,
+  * **Effacer** : vide définitivement la zone de logs.
+* Ces boutons sont automatiquement désactivés si aucun message n’est présent, et chacun affiche une **confirmation visuelle** (coche ou animation) lors de l’action.
+
+### Mode « Streamer »
+
+Masque instantanément le contenu sensible des logs :
+
+* Activez ou désactivez via l’**icône œil** en haut à droite du journal.
+* L’icône passe d’un œil **ouvert** à un œil **barré**, et le texte du log est flouté.
+* Idéal pour diffuser ou partager votre écran sans exposer de données confidentielles.
+
+### Rechercher dans les logs
+
+Une recherche intégrée pour trouver rapidement un mot‑clé :
+
+* Ouvrez la barre de recherche avec `Ctrl + F` ou en cliquant sur l’**icône loupe**.
+* Tous les résultats sont **surlignés** en bleu dans le journal.
+* Le nombre total d’occurrences s’affiche dynamiquement.
+* Fermez la recherche avec la **croix** ou la touche `Échap`.
+
+### Effacer les logs
+
+Videz complètement la zone de journalisation d’un simple clic :
+
+* Cliquez sur l’**icône corbeille** pour supprimer tous les messages affichés.
+* Cette action est **immédiate et irréversible**, mais **ne stoppe pas** le processus en cours.
+* Le bouton reste désactivé tant que le journal est vide.
+
+### Télécharger les logs
+
+Exportez votre journal au format texte :
+
+* Cliquez sur l’**icône de téléchargement** pour exporter tout le journal dans un fichier `.txt`.
+* Le contenu est sauvegardé dans l’ordre d’apparition, prêt à être analysé ou partagé.
+* Comme pour les autres contrôles, ce bouton est inactif si aucun log n’est présent.
 
 ## Fonctionnalités système (icône de la barre)
 
