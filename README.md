@@ -2,6 +2,7 @@
 Ce programme open-source propose des automatismes sûrs pour le réseau social Discord à des fins éthiques et d'apprentissage uniquement.
 Cette documentation explique comment récupérer votre token Discord et présente en détail toutes les fonctionnalités de l’application.
 
+---
 <p align="center">
   <a href="https://github.com/skyros-lab/gd-automates/releases/latest">
     <img alt="Download" src="https://img.shields.io/badge/Télécharger-dernière%20release-blue?style=for-the-badge&logo=github">
@@ -16,6 +17,28 @@ Cette documentation explique comment récupérer votre token Discord et présent
 [![Release](https://img.shields.io/github/v/release/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/releases)
 [![Last Commit](https://img.shields.io/github/last-commit/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/commits)
 [![Stars](https://img.shields.io/github/stars/skyros-lab/gd-automates?style=social)](https://github.com/skyros-lab/gd-automates/stargazers)
+
+---
+## 📦 Téléchargement
+
+[![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows95&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+
+La dernière version stable de l’application est disponible à l’adresse suivante :  
+[https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest)
+
+Des fichiers sont proposés pour chaque système d’exploitation :
+
+- **Windows** : `.exe` (exécutable autonome) ou `.zip` (archive portable)
+- **macOS** : `.dmg` (installateur) ou `.zip` (version portable)
+- **Linux** : `.AppImage` (exécutable universel), `.deb` (Debian/Ubuntu), ou `.tar.gz` (version portable)
+
+Aucune installation n’est requise.  
+Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
+
+---
 
 ## 🧭 Sommaire
 
@@ -129,27 +152,6 @@ Le menu contextuel propose :
 En version packagée, l’application vérifie et télécharge automatiquement les mises à jour disponibles via `electron-updater`. Aucune action supplémentaire n’est requise de votre part.
 
 Ce document couvre l’intégralité des fonctionnalités accessibles via l’interface et le code présenté. Il est conçu pour être pédagogique et vous permettre d’exploiter l’application en toute autonomie.
-
----
-
-## 📦 Téléchargement
-
-[![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows95&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
-
-La dernière version stable de l’application est disponible à l’adresse suivante :  
-[https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest)
-
-Des fichiers sont proposés pour chaque système d’exploitation :
-
-- **Windows** : `.exe` (exécutable autonome) ou `.zip` (archive portable)
-- **macOS** : `.dmg` (installateur) ou `.zip` (version portable)
-- **Linux** : `.AppImage` (exécutable universel), `.deb` (Debian/Ubuntu), ou `.tar.gz` (version portable)
-
-Aucune installation n’est requise.  
-Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
 
 ---
 
