@@ -2,6 +2,18 @@
 Ce programme open-source propose des automatismes sûrs pour le réseau social Discord à des fins éthiques et d'apprentissage uniquement.
 Cette documentation explique comment récupérer votre token Discord et présente en détail toutes les fonctionnalités de l’application.
 
+[![Made with Electron](https://img.shields.io/badge/Electron-%2320232a?logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Auto Update](https://img.shields.io/badge/Update-Automatique-success)](#mise-à-jour-automatique)
+[![Release](https://img.shields.io/github/v/release/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/releases)
+
+## 🧭 Sommaire
+
+- [Récupération du token Discord](#récupération-de-votre-token-discord)
+- [Fonctionnalités principales](#fonctionnalités-principales)
+- [Fonctionnalités système (icône de la barre)](#fonctionnalités-système-icône-de-la-barre)
+- [Mise à jour automatique](#mise-à-jour-automatique)
+
 ## Récupération de votre token Discord
 
 Pour utiliser l’application, vous devez fournir un token Discord valide. Ce token permet à l’application d’agir en votre nom et d’interagir avec l’API Discord.
@@ -108,3 +120,10 @@ En version packagée, l’application vérifie et télécharge automatiquement l
 ---
 
 Ce document couvre l’intégralité des fonctionnalités accessibles via l’interface et le code présenté. Il est conçu pour être pédagogique et vous permettre d’exploiter l’application en toute autonomie.
+
+---
+
+## ✋ Envie de contribuer ?
+
+Forkez le projet, étoilez le dépôt ⭐️ et proposez une amélioration !
+- [Issues](https://github.com/skyros-lab/gd-automates/issues) | [Pull Requests](https://github.com/skyros-lab/gd-automates/pulls)
