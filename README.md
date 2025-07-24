@@ -12,10 +12,13 @@ Cette documentation explique comment récupérer votre token Discord et présent
 [![Made with Electron](https://img.shields.io/badge/Electron-%2320232a?logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow?logo=javascript)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 [![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-informational?logo=windows&logoColor=white)](#)
+[![Node](https://img.shields.io/badge/node-%3E=18.x-brightgreen?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Auto Update](https://img.shields.io/badge/Update-Automatique-success)](#mise-à-jour-automatique)
 [![Release](https://img.shields.io/github/v/release/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/releases)
+[![Downloads](https://img.shields.io/github/downloads/skyros-lab/gd-automates/total?label=téléchargements%20total)](https://github.com/skyros-lab/gd-automates/releases)
 [![Last Commit](https://img.shields.io/github/last-commit/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/commits)
+[![Code Size](https://img.shields.io/github/languages/code-size/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates)
 [![Stars](https://img.shields.io/github/stars/skyros-lab/gd-automates?style=social)](https://github.com/skyros-lab/gd-automates/stargazers)
 
 ---
