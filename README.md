@@ -61,7 +61,7 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 - [Mise à jour automatique](#mise-à-jour-automatique)
 - [À propos](#à-propos)
 
-## Récupération de votre token Discord
+## - [x] Récupération de votre token Discord
 
 Pour utiliser l’application, vous devez fournir un token Discord valide. Ce token permet à l’application d’agir en votre nom et d’interagir avec l’API Discord.
 
