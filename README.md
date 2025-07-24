@@ -125,13 +125,15 @@ Ce document couvre l’intégralité des fonctionnalités accessibles via l’in
 
 ---
 
-## À propos
+## 🕵️ À propos
 
 Développé par [@skyros-lab](https://github.com/skyros-lab), ce projet open-source vise à fournir une interface intuitive pour interagir avec l’API Discord.
 
 Il est conçu exclusivement pour un usage personnel, éducatif et conforme aux conditions d’utilisation de Discord.
 
 > Ce projet n’est ni affilié, ni soutenu par Discord Inc.
+
+---
 
 ## ✋ Envie de contribuer ?
 
