@@ -24,19 +24,47 @@ Cette documentation explique comment récupérer votre token Discord et présent
 ---
 ## 📦 Téléchargement
 
-[![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+<p align="center">
+  <a href="https://github.com/skyros-lab/gd-automates/releases/latest">
+    <img src="https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version" alt="Dernière version">
+  </a>
+  <a href="https://github.com/skyros-lab/gd-automates/releases/latest">
+    <img src="https://img.shields.io/badge/Windows-.exe-blue?logo=windows&logoColor=white" alt="Téléchargement Windows">
+  </a>
+  <a href="https://github.com/skyros-lab/gd-automates/releases/latest">
+    <img src="https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white" alt="Téléchargement macOS">
+  </a>
+  <a href="https://github.com/skyros-lab/gd-automates/releases/latest">
+    <img src="https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white" alt="Téléchargement Linux">
+  </a>
+</p>
 
 La dernière version stable de l’application est disponible à l’adresse suivante :  
 [https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest)
 
 Des fichiers sont proposés pour chaque système d’exploitation :
 
-- **Windows** : `.exe` (exécutable autonome) ou `.zip` (archive portable)
-- **macOS** : `.dmg` (installateur) ou `.zip` (version portable)
-- **Linux** : `.AppImage` (exécutable universel), `.deb` (Debian/Ubuntu), ou `.tar.gz` (version portable)
+### Windows
+
+| Type            | Format        |
+|-----------------|---------------|
+| Exécutable      | `.exe`        |
+| Archive portable| `.zip`        |
+
+### macOS
+
+| Type            | Format        |
+|-----------------|---------------|
+| Installateur    | `.dmg`        |
+| Version portable| `.zip`        |
+
+### Linux
+
+| Type              | Format         |
+|-------------------|----------------|
+| Exécutable universel | `.AppImage` |
+| Installateur (Debian/Ubuntu) | `.deb` |
+| Version portable   | `.tar.gz`     |
 
 Aucune installation n’est requise.  
 Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
@@ -51,7 +79,7 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 - [Mise à jour automatique](#mise-à-jour-automatique)
 - [À propos](#à-propos)
 
-## Récupération de votre token Discord
+## [x] Récupération de votre token Discord
 
 Pour utiliser l’application, vous devez fournir un token Discord valide. Ce token permet à l’application d’agir en votre nom et d’interagir avec l’API Discord.
 
