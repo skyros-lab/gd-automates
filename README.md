@@ -9,6 +9,13 @@ Cette documentation explique comment récupérer votre token Discord et présent
 [![Release](https://img.shields.io/github/v/release/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/releases)
 [![Last Commit](https://img.shields.io/github/last-commit/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/commits)
 [![Stars](https://img.shields.io/github/stars/skyros-lab/gd-automates?style=social)](https://github.com/skyros-lab/gd-automates/stargazers)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/skyros-lab/gd-automates/ci.yml?branch=main)](https://github.com/skyros-lab/gd-automates/actions)
+[![Issues](https://img.shields.io/github/issues/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/pulls)
+[![Forks](https://img.shields.io/github/forks/skyros-lab/gd-automates?style=social)](https://github.com/skyros-lab/gd-automates/network/members)
+[![Watchers](https://img.shields.io/github/watchers/skyros-lab/gd-automates?style=social)](https://github.com/skyros-lab/gd-automates/watchers)
+[![Good First Issue](https://img.shields.io/github/issues/skyros-lab/gd-automates/good%20first%20issue)](https://github.com/skyros-lab/gd-automates/issues?q=is%3Aissue+label%3A%22good+first+issue%22)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/skyros-lab/gd-automates/issues)
 
 ## 🧭 Sommaire
 
