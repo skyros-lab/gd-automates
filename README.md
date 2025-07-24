@@ -16,7 +16,7 @@ Cette documentation explique comment récupérer votre token Discord et présent
 - [Fonctionnalités principales](#fonctionnalités-principales)
 - [Fonctionnalités système (icône de la barre)](#fonctionnalités-système-icône-de-la-barre)
 - [Mise à jour automatique](#mise-à-jour-automatique)
-- [À propos](#🕵️-à-propos)
+- [À propos](#à-propos)
 
 ## Récupération de votre token Discord
 
