@@ -71,8 +71,8 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 - [Fonctionnalités système (icône de la barre)](#fonctionnalités-système-icône-de-la-barre)
 - [Mise à jour automatique](#mise-à-jour-automatique)
 - [Téléchargement](#-téléchargement)
-- [À propos](#-à-propos)
-- [Envie de contribuer ?](#-envie-de-contribuer)
+- [À propos](#-à-propos-)
+- [Envie de contribuer ?](#-envie-de-contribuer-)
 
 ## Récupération de votre token Discord
 
