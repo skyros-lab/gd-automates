@@ -55,7 +55,7 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 
 ## 🧭 Sommaire
 
-- [Téléchargement de l'application et formats disponibles](#téléchargement)
+- [Téléchargement de l'application et formats disponibles](#-téléchargement)
 - [Récupération de votre token Discord personnel](#récupération-de-votre-token-discord)
 - [Fonctionnalités principales de l'application](#fonctionnalités-principales)
   - [Vérification et validation automatique du token](#validation-du-token)
@@ -71,8 +71,8 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
   - [Activer le mode Streamer pour masquer les données sensibles](#mode-streamer)
 - [Fonctionnalités système via l'icône de la barre](#fonctionnalités-système-icône-de-la-barre)
 - [Système de mise à jour automatique intégré](#mise-à-jour-automatique)
-- [À propos du projet et de son auteur](#à-propos)
-- [Contribuer au développement du projet](#envie-de-contribuer-)
+- [À propos du projet et de son auteur](#%EF%B8%8F-à-propos)
+- [Contribuer au développement du projet](#-envie-de-contribuer-)
 
 ## Récupération de votre token Discord
 
