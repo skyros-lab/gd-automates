@@ -135,7 +135,7 @@ Ce document couvre l’intégralité des fonctionnalités accessibles via l’in
 ## 📦 Téléchargement
 
 [![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows95&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 [![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 [![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 
