@@ -44,15 +44,11 @@ La dernière version stable de l’application est disponible à l’adresse sui
 
 Des fichiers sont proposés pour chaque système d’exploitation :
 
-| Plateforme | Type                    | Format     |
-|------------|-------------------------|------------|
-| **Windows** | Exécutable              | `.exe`     |
-|            | Archive portable         | `.zip`     |
-| **macOS**   | Installateur             | `.dmg`     |
-|            | Version portable         | `.zip`     |
-| **Linux**   | Exécutable universel     | `.AppImage`|
-|            | Installateur (Debian/Ubuntu) | `.deb` |
-|            | Version portable         | `.tar.gz`  |
+| Plateforme | Type                                                            | Format                          |
+|------------|------------------------------------------------------------------|----------------------------------|
+| **Windows** | Exécutable, Archive portable                                   | `.exe`, `.zip`                  |
+| **macOS**   | Installateur, Version portable                                 | `.dmg`, `.zip`                  |
+| **Linux**   | Exécutable universel, Installateur (Debian/Ubuntu), Version portable | `.AppImage`, `.deb`, `.tar.gz` |
 
 Aucune installation n’est requise.  
 Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
