@@ -1,4 +1,4 @@
-# 🕵️ Discord Automation GUI
+# Discord Automation GUI
 Ce programme open-source propose des automatismes sûrs pour le réseau social Discord à des fins éthiques et d'apprentissage uniquement.
 Cette documentation explique comment récupérer votre token Discord et présente en détail toutes les fonctionnalités de l’application.
 
@@ -25,7 +25,7 @@ Cette documentation explique comment récupérer votre token Discord et présent
 ## 📦 Téléchargement
 
 [![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
-[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows95&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 [![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 [![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
 
