@@ -1,4 +1,4 @@
-# Discord Automation GUI
+# 🕵️ Discord Automation GUI
 Ce programme open-source propose des automatismes sûrs pour le réseau social Discord à des fins éthiques et d'apprentissage uniquement.
 Cette documentation explique comment récupérer votre token Discord et présente en détail toutes les fonctionnalités de l’application.
 
