@@ -57,11 +57,24 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 
 - [Récupération du token Discord](#récupération-de-votre-token-discord)
 - [Fonctionnalités principales](#fonctionnalités-principales)
+  - [Validation du token](#validation-du-token)
+  - [Sélection du mode d’opération](#sélection-du-mode-dopération)
+  - [Choix du serveur et du salon](#choix-du-serveur-et-du-salon)
+  - [Configuration de la suppression](#configuration-de-la-suppression)
+    - [Plage de messages](#plage-de-messages)
+    - [Filtrage par date et par ID](#filtrage-par-date-et-par-id)
+    - [Filtrage par mots-clés](#filtrage-par-mots-clés)
+    - [Filtrage par type de contenu](#filtrage-par-type-de-contenu)
+  - [Contrôle du processus](#contrôle-du-processus)
+  - [Suivi et journalisation](#suivi-et-journalisation)
+  - [Mode Streamer](#mode-streamer)
 - [Fonctionnalités système (icône de la barre)](#fonctionnalités-système-icône-de-la-barre)
 - [Mise à jour automatique](#mise-à-jour-automatique)
-- [À propos](#à-propos)
+- [Téléchargement](#-téléchargement)
+- [À propos](#-à-propos)
+- [Envie de contribuer ?](#-envie-de-contribuer)
 
-## - [x] Récupération de votre token Discord
+## Récupération de votre token Discord
 
 Pour utiliser l’application, vous devez fournir un token Discord valide. Ce token permet à l’application d’agir en votre nom et d’interagir avec l’API Discord.
 
