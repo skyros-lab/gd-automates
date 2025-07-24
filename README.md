@@ -10,6 +10,7 @@ Cette documentation explique comment récupérer votre token Discord et présent
 
 [![Made with Electron](https://img.shields.io/badge/Electron-%2320232a?logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow?logo=javascript)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-informational?logo=windows&logoColor=white)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Auto Update](https://img.shields.io/badge/Update-Automatique-success)](#mise-à-jour-automatique)
 [![Release](https://img.shields.io/github/v/release/skyros-lab/gd-automates)](https://github.com/skyros-lab/gd-automates/releases)
@@ -128,6 +129,27 @@ Le menu contextuel propose :
 En version packagée, l’application vérifie et télécharge automatiquement les mises à jour disponibles via `electron-updater`. Aucune action supplémentaire n’est requise de votre part.
 
 Ce document couvre l’intégralité des fonctionnalités accessibles via l’interface et le code présenté. Il est conçu pour être pédagogique et vous permettre d’exploiter l’application en toute autonomie.
+
+---
+
+## 📦 Téléchargement
+
+[![Dernière version](https://img.shields.io/github/v/release/skyros-lab/gd-automates?label=version)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Windows](https://img.shields.io/badge/Windows-.exe-blue?logo=windows&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement macOS](https://img.shields.io/badge/macOS-.dmg-blue?logo=apple&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+[![Téléchargement Linux](https://img.shields.io/badge/Linux-.AppImage-blue?logo=linux&logoColor=white)](https://github.com/skyros-lab/gd-automates/releases/latest)
+
+La dernière version stable de l’application est disponible à l’adresse suivante :  
+[https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest)
+
+Des fichiers sont proposés pour chaque système d’exploitation :
+
+- **Windows** : `.exe` (exécutable autonome) ou `.zip` (archive portable)
+- **macOS** : `.dmg` (installateur) ou `.zip` (version portable)
+- **Linux** : `.AppImage` (exécutable universel), `.deb` (Debian/Ubuntu), ou `.tar.gz` (version portable)
+
+Aucune installation n’est requise.  
+Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
 
 ---
 
