@@ -44,27 +44,15 @@ La dernière version stable de l’application est disponible à l’adresse sui
 
 Des fichiers sont proposés pour chaque système d’exploitation :
 
-### Windows
-
-| Type            | Format        |
-|-----------------|---------------|
-| Exécutable      | `.exe`        |
-| Archive portable| `.zip`        |
-
-### macOS
-
-| Type            | Format        |
-|-----------------|---------------|
-| Installateur    | `.dmg`        |
-| Version portable| `.zip`        |
-
-### Linux
-
-| Type              | Format         |
-|-------------------|----------------|
-| Exécutable universel | `.AppImage` |
-| Installateur (Debian/Ubuntu) | `.deb` |
-| Version portable   | `.tar.gz`     |
+| Plateforme | Type                    | Format     |
+|------------|-------------------------|------------|
+| **Windows** | Exécutable              | `.exe`     |
+|            | Archive portable         | `.zip`     |
+| **macOS**   | Installateur             | `.dmg`     |
+|            | Version portable         | `.zip`     |
+| **Linux**   | Exécutable universel     | `.AppImage`|
+|            | Installateur (Debian/Ubuntu) | `.deb` |
+|            | Version portable         | `.tar.gz`  |
 
 Aucune installation n’est requise.  
 Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
@@ -79,7 +67,7 @@ Il suffit de télécharger le fichier adapté à votre système, puis de lancer 
 - [Mise à jour automatique](#mise-à-jour-automatique)
 - [À propos](#à-propos)
 
-## [x] Récupération de votre token Discord
+## Récupération de votre token Discord
 
 Pour utiliser l’application, vous devez fournir un token Discord valide. Ce token permet à l’application d’agir en votre nom et d’interagir avec l’API Discord.
 
