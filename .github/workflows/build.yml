@@ -6,6 +6,10 @@ on:
     tags:     [ "v*" ]
     paths:    [ "package.json" ]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     strategy:
