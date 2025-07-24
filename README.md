@@ -49,6 +49,7 @@ Cette documentation explique comment récupérer votre token Discord et présent
 
 La dernière version stable de l’application est disponible à l’adresse suivante :  
 [https://github.com/skyros-lab/gd-automates/releases/latest](https://github.com/skyros-lab/gd-automates/releases/latest).
+
 Il suffit de télécharger le fichier adapté à votre système, puis de lancer l’exécutable ou d’extraire l’archive si nécessaire.
 
 ---
