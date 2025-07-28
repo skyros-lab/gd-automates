@@ -7,7 +7,7 @@ on:
     paths:    [ "package.json" ]
 
 permissions:
-  contents: read
+  contents: write
   packages: write
 
 jobs:
